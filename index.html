@@ -18,32 +18,58 @@
           <h2>Instruction</h2>
           <div id="instructions">
             <ol class="list">
-              <li class="line">Upload an image to the 'Upload' box (middle box).</li>
-              <li class="line">press the 'Crop' button below the box</li>
-              <li class="line">After the 'Retrieve' box says 'Download', press it to download the new image.</li>
+              <li class="line">Click 'Choose file' button to select an image to upload.</li>
+              <li class="line">press 'Submit' button</li>
+              <li class="line">After 'Download' button appears, press it to download the new image.</li>
             </ol>
           </div>
         </div>
+        <div style="text-align: left;">
+          <h2>&nbsp</h2>
+          <img id="output" width="200"/>
+          <div><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></div>
+          <div class="choose_file"><label for="file">Choose file</label></div>
+          <br>
+          <button id="submit_button">Submit</button>
+        </div>
 
-        <div class="content">
+
+<!-- <p><img id="output" width="200" /></p> -->
+
+        <!-- <div class="content">
           <h2 >Upload</h2>
           <div id="upload">
           </div>
           <button id="crop_button">Crop</button>
-        </div>
+        </div> -->
 
 
         <div class="content">
           <h2>Retrieve</h2>
-          <div id="retrieve">
-          </div>
+          <!-- <div id="retrieve">
+          </div> -->
         </div>
+
+        <!-- <input type="file" id="input"> -->
 
 
       </div>
       <footer>
         <div>Copyright &copy; 2021 Team ARG</div>
         </footer>
+
+
+
+
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+  // image.src is the image
+};
+
+// const selectedFile = document.getElementById('input').files[0];
+</script>
 
     </body>
 
