@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 from deepface.commons.functions import preprocess_face
+import sys
 
 BACKENDS = ["retinaface", "mtcnn", "ssd"]
 
@@ -67,7 +68,10 @@ def find_face(image):
     return result
 
 def main():
-    pass
+    if len(sys.argv) == 2:
+        img = Image.open(sys.argv[1])
+        out = find_face(img)
+        out.save("out.jpeg")
 
 
 if __name__ == "__main__":
