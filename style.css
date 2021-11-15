@@ -42,8 +42,6 @@ header{
   /* border: 2px solid black; */
   width: 350px;
   height: 400px;
-
-
 }
 
 #instructions{
@@ -110,4 +108,52 @@ footer{
   padding-left:20px;
   background-color: #2C4762;
   color: #A1ACD1;
+}
+
+/*  responsive */
+@media screen and (max-width: 767px) {
+  body {
+    width: 100%;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .pc-only {
+   display: none;
+ }
+
+ #header{
+   position: absolute;
+   width: 100%;
+ }
+
+ #contents{
+   margin-top: 200px;
+ }
+
+ #instructions, #upload, #retrieve{
+   width: 90%;
+   height: 200px;
+ }
+
+
+ #instructions{
+   font-size: 12px;
+ }
+
+ .sp-only {
+   display: block;
+ }
+ .title{
+   font-size: 20px;
+ }
+ .about{
+   font-size: 10px;
+ }
+
+
+
+
+
+
+
 }
