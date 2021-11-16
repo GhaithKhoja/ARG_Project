@@ -16,7 +16,7 @@ def crop_face(img):
     face = find_face(img)
     final =  run(face)
     final = final.convert("RGB")
-    final.save("out.jpeg")
+    final.save("out.png")
     return final
 
 
