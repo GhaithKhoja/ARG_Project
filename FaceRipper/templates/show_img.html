@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>FaceRipper</title>
+{% endblock %}
+
+{% block body %}
+<div>
+    <h1>Result</h1>
+</div>
+
+<div>
+    <img src="{{url_for('get_result', filename=result)}}" alt="result_photo" />
+</div>
+
+
+{% endblock %}
