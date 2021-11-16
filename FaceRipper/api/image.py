@@ -11,7 +11,7 @@ import numpy as np
 
 @FaceRipper.app.route("/", methods=["get"])
 def index():
-    return flask.render_template("submit.html")
+    return flask.render_template("index.html")
 
 @FaceRipper.app.route("/api/image/mask/", methods=["post"])
 def mask_api():
