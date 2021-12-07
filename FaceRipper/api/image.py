@@ -7,6 +7,7 @@ import time
 import uuid
 import pathlib
 from FaceRipper.api.model import get_pred, drawMask
+from facecrop import crop_face
 import numpy as np
 
 @FaceRipper.app.route("/", methods=["get"])
@@ -21,7 +22,7 @@ def mask_api():
     pred = get_pred(img)
     #end = time.time()
     pred = pred[0]
-    maskedImg = drawMask(img, pred)
+    maskedImg = crop_face(img, pred)
     filename = save_file(maskedImg, input_img.filename)
     context = {
         "result" : filename
